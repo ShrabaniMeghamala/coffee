@@ -16,11 +16,18 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
     int quantity=1;
+    boolean addWhippedCream;
+    boolean addChocolate;
+    TextView priceText;
+    EditText name;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        name = findViewById(R.id.name);
+        priceText=findViewById(R.id.price);
     }
     public void increment(View view){
         quantity = quantity+1;
@@ -41,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox whippedCreamCheckBox=(CheckBox) findViewById(R.id.whipped);
         boolean hasWhippedCream=whippedCreamCheckBox.isChecked();
 
+
         CheckBox chocolateCheckBox=(CheckBox) findViewById(R.id.chocolate);
         boolean hasChocolate=chocolateCheckBox.isChecked();
 
@@ -54,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
-
+        displayPrice(price);
     }
     private int calculatePrice(boolean addWhipped, boolean addChocolate){
         int price=5;
@@ -68,16 +76,49 @@ public class MainActivity extends AppCompatActivity {
     }
     private String creatOrderSummary(String name,int price,boolean addWhippedCream,boolean addChocolate){
         String priceMessage="Name: " + name;
-        priceMessage=priceMessage+"\nAdd whipped cream?"+addWhippedCream;
-        priceMessage=priceMessage+"\nAdd chocolate?"+addChocolate;
+        priceMessage=priceMessage+"\nAdd whipped cream:"+translate(addWhippedCream);
+        priceMessage=priceMessage+"\nAdd chocolate:"+translate(addChocolate) ;
         priceMessage= priceMessage+"\nQuantity:" + quantity;
         priceMessage= priceMessage+"\nTotal:$" + price;
         priceMessage=priceMessage + "\nThank you";
         return priceMessage;
     }
+
+    public String translate(boolean trueorFalse) {
+        String ans=null;
+        if (trueorFalse) {
+            ans= "Yes";
+        }
+        else {
+            ans= "NO";
+        }
+        return ans;
+    }
+
+
+
     private void display(int number){
         TextView quantityTextView=(TextView) findViewById(R.id.quantity);
         quantityTextView.setText(""+number);
+
+        CheckBox whippedCreamCheckBox=(CheckBox) findViewById(R.id.whipped);
+        boolean hasWhippedCream=whippedCreamCheckBox.isChecked();
+
+
+        CheckBox chocolateCheckBox=(CheckBox) findViewById(R.id.chocolate);
+        boolean hasChocolate=chocolateCheckBox.isChecked();
+
+        priceText.setText(""+calculatePrice(hasWhippedCream,hasChocolate));
     }
+    private void displayPrice(int number){
+        TextView priceTextVIew=(TextView) findViewById(R.id.price);
+        priceTextVIew.setText(NumberFormat.getCurrencyInstance().format(number));
+
+
+    }
+//    private void displayMessage(String message){
+//        TextView priceTextView = (TextView) findViewById(R.id.price);
+//        priceTextView.setText(message);
+//    }
 
 }
