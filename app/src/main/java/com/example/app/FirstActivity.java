@@ -13,6 +13,7 @@ public class FirstActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
+
     }
     public void submitSend(View view){
         Intent intent =new Intent(FirstActivity.this,SecondActivity.class);
