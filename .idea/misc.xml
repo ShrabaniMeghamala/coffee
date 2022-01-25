@@ -3,9 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/App/app/src/main/res/layout/activity1.xml" value="0.13402777777777777" />
+        <entry key="..\:/App/app/src/main/res/layout/activity_first.xml" value="0.22" />
         <entry key="..\:/App/app/src/main/res/layout/activity_main.xml" value="0.22962962962962963" />
         <entry key="..\:/App/app/src/main/res/layout/activity_main2.xml" value="0.13819444444444445" />
+        <entry key="..\:/App/app/src/main/res/layout/activity_second.xml" value="0.18" />
+        <entry key="..\:/App/app/src/main/res/layout/activitytofragment.xml" value="0.13402777777777777" />
         <entry key="..\:/App/app/src/main/res/layout/beach.xml" value="0.18981481481481483" />
+        <entry key="..\:/App/app/src/main/res/layout/fragment.xml" value="0.1" />
+        <entry key="..\:/App/app/src/main/res/layout/fragment_a.xml" value="0.2" />
+        <entry key="..\:/App/app/src/main/res/layout/fragment_b.xml" value="0.13402777777777777" />
+        <entry key="..\:/App/app/src/main/res/layout/fragment_blank.xml" value="0.13402777777777777" />
+        <entry key="..\:/App/app/src/main/res/layout/fragment_for_activity.xml" value="0.13402777777777777" />
+        <entry key="..\:/App/app/src/main/res/layout/fragment_one.xml" value="0.13402777777777777" />
+        <entry key="..\:/App/app/src/main/res/layout/fragment_to_activity.xml" value="0.13402777777777777" />
+        <entry key="..\:/App/app/src/main/res/layout/fragment_to_fragment.xml" value="0.13402777777777777" />
         <entry key="..\:/App/app/src/main/res/layout/linear.xml" value="0.18981481481481483" />
         <entry key="..\:/App/app/src/main/res/layout/relative.xml" value="0.14270833333333333" />
         <entry key="..\:/App/app/src/main/res/layout/relative1.xml" value="0.13819444444444445" />
